@@ -11,10 +11,11 @@ function onVerificationForm(event) {
   if (email === "" || password === "") {
     alert("Усі поля повинні бути заповнені!");
   } else {
-    console.log({
+    const newUser = {
       email: email,
       password: password,
-    });
+    };
+    console.log(newUser);
     form.reset();
   }
 }
