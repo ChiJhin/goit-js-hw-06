@@ -1,8 +1,8 @@
 const registrationForm = document.querySelector(".login-form");
 
-registrationForm.addEventListener("submit", verificationForm);
+registrationForm.addEventListener("submit", onVerificationForm);
 
-function verificationForm(event) {
+function onVerificationForm(event) {
   event.preventDefault();
   const form = event.target;
   const email = form.elements.email.value;
