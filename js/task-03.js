@@ -26,7 +26,7 @@ function markup(element) {
   return element
     .map(
       ({ url, alt }) =>
-        `<li class="list-item"><img src="${url}" alt="${alt}"></li>`
+        `<li class="list-item animals"><img src="${url}" alt="${alt}"></li>`
     )
     .join("");
 }
@@ -34,13 +34,3 @@ function markup(element) {
 const imagesMarkup = markup(images);
 
 list.insertAdjacentHTML("beforeend", imagesMarkup);
-
-const listItems = document.querySelectorAll(".list-item");
-
-// const addClass = listItems.forEach((item) => item.classList.add("animals"));
-
-function addClass(items, selector) {
-  items.forEach((item) => item.classList.add(`${selector}`));
-}
-
-addClass(listItems, "animals");
